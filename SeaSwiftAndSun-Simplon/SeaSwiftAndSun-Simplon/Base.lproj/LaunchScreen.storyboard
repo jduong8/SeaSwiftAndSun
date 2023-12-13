@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seaTravel" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-IH-3aN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaTravel" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-IH-3aN">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="travelColor"/>
                             </imageView>
@@ -38,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="seaTravel" width="1024" height="1024"/>
+        <image name="SeaTravel" width="1024" height="1024"/>
         <namedColor name="travelColor">
             <color red="0.94509804249999996" green="0.74901962280000001" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

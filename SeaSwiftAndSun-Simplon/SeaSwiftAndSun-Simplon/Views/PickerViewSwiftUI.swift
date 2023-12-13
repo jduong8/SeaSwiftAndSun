@@ -28,24 +28,27 @@ struct PickerViewSwiftUI: View {
     }
 }
 
-enum PickerOption: String, CaseIterable {
-    case list = "Liste"
-    case map = "Carte"
+extension PickerViewSwiftUI {
+    private enum PickerOption: String, CaseIterable {
+        case list = "Liste"
+        case map = "Carte"
+    }
 }
 
-struct ListView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> some UIViewController {
-        guard let listVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else {
-            fatalError("Unable to instantiate NavigationController")
+extension PickerViewSwiftUI {
+    private struct ListView: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> some UIViewController {
+            guard let listVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else {
+                fatalError("Unable to instantiate NavigationController")
+            }
+            return listVC
         }
-        return listVC
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            
+        }
     }
 }
-
 
 #Preview {
     PickerViewSwiftUI()
