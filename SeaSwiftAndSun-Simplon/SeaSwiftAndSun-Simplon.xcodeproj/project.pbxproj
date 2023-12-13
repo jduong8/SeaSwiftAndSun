@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133FCBB72B275FBE00B3D849 /* SurfSpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FCBB62B275FBE00B3D849 /* SurfSpotModel.swift */; };
+		133FCBC02B284FF000B3D849 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FCBBF2B284FF000B3D849 /* APIManager.swift */; };
 		4201DA6F2B1F686B002A203E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201DA6E2B1F686B002A203E /* AppDelegate.swift */; };
 		4201DA712B1F686B002A203E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201DA702B1F686B002A203E /* SceneDelegate.swift */; };
 		4201DA732B1F686B002A203E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201DA722B1F686B002A203E /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133FCBB62B275FBE00B3D849 /* SurfSpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpotModel.swift; sourceTree = "<group>"; };
+		133FCBBF2B284FF000B3D849 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4201DA6B2B1F686B002A203E /* SeaSwiftAndSun-Simplon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeaSwiftAndSun-Simplon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4201DA6E2B1F686B002A203E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4201DA702B1F686B002A203E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133FCBB52B275F9B00B3D849 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				133FCBB62B275FBE00B3D849 /* SurfSpotModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		133FCBBD2B284FD900B3D849 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				133FCBBE2B284FE100B3D849 /* Parser */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		133FCBBE2B284FE100B3D849 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				133FCBBF2B284FF000B3D849 /* APIManager.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 		4201DA622B1F686B002A203E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +88,8 @@
 		4201DA6D2B1F686B002A203E /* SeaSwiftAndSun-Simplon */ = {
 			isa = PBXGroup;
 			children = (
+				133FCBBD2B284FD900B3D849 /* API */,
+				133FCBB52B275F9B00B3D849 /* Model */,
 				4201DA852B1F756D002A203E /* Views */,
 				4201DA842B1F7561002A203E /* Controllers */,
 				4201DA6E2B1F686B002A203E /* AppDelegate.swift */,
@@ -165,6 +195,8 @@
 				4201DA6F2B1F686B002A203E /* AppDelegate.swift in Sources */,
 				4201DA712B1F686B002A203E /* SceneDelegate.swift in Sources */,
 				4201DA832B1F6C28002A203E /* SpotCell.swift in Sources */,
+				133FCBB72B275FBE00B3D849 /* SurfSpotModel.swift in Sources */,
+				133FCBC02B284FF000B3D849 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,9 +348,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = 8683PB3PNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SeaSwiftAndSun-Simplon/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SeaTravel;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +361,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amandinecousin.SeaSwiftAndSun-Simplon";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iJoe.SeaTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -346,9 +379,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = 8683PB3PNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SeaSwiftAndSun-Simplon/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SeaTravel;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amandinecousin.SeaSwiftAndSun-Simplon";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iJoe.SeaTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
