@@ -84,6 +84,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail",
+           let detailSpotViewController = segue.destination as? DetailSpotViewController,
+           let indexPath = tableView.indexPathForSelectedRow,
+           let fields = sections[indexPath.section].records[indexPath.row].fields {
+            detailSpotViewController.configure(with: fields)
+        }
+    }
+}
+
 /// Création d'une structure pour représenter chaque section contenant le type de `Surf Break` et les `Records` correspondants.
 struct SurBreakSection {
     var type: String
