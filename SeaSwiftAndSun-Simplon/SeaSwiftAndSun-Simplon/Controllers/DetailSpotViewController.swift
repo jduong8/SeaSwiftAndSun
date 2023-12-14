@@ -45,7 +45,6 @@ class DetailSpotViewController: UIViewController {
                 await ImageLoader.shared.loadImage(into: spotImage,from: photo.url)
             }
         }
-        self.spotImage.layer.cornerRadius = self.spotImage.frame.size.width / 2
     }
     
     private func setupSpotName() {

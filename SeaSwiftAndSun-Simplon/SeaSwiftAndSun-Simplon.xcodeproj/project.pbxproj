@@ -19,6 +19,9 @@
 		4201DA7B2B1F686E002A203E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4201DA792B1F686E002A203E /* LaunchScreen.storyboard */; };
 		4201DA832B1F6C28002A203E /* SpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201DA822B1F6C28002A203E /* SpotCell.swift */; };
 		4201DA872B1F7589002A203E /* DetailSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201DA862B1F7589002A203E /* DetailSpotViewController.swift */; };
+		D9260B172B2B3B3F00EA10CB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9260B162B2B3B3F00EA10CB /* NavigationController.swift */; };
+		D937E2AB2B2AFBDD00F3FB10 /* PickerViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937E2AA2B2AFBDD00F3FB10 /* PickerViewSwiftUI.swift */; };
+		D937E2AD2B2B012900F3FB10 /* MapViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937E2AC2B2B012900F3FB10 /* MapViewSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		4201DA7C2B1F686E002A203E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4201DA822B1F6C28002A203E /* SpotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCell.swift; sourceTree = "<group>"; };
 		4201DA862B1F7589002A203E /* DetailSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSpotViewController.swift; sourceTree = "<group>"; };
+		D9260B162B2B3B3F00EA10CB /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D937E2AA2B2AFBDD00F3FB10 /* PickerViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewSwiftUI.swift; sourceTree = "<group>"; };
+		D937E2AC2B2B012900F3FB10 /* MapViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewSwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 			children = (
 				4201DA722B1F686B002A203E /* ViewController.swift */,
 				4201DA862B1F7589002A203E /* DetailSpotViewController.swift */,
+				D9260B162B2B3B3F00EA10CB /* NavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				4201DA822B1F6C28002A203E /* SpotCell.swift */,
+				D937E2AA2B2AFBDD00F3FB10 /* PickerViewSwiftUI.swift */,
+				D937E2AC2B2B012900F3FB10 /* MapViewSwiftUI.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E11EA22B2B0D4C00DBCA03 /* DateFormatter.swift in Sources */,
+				D9260B172B2B3B3F00EA10CB /* NavigationController.swift in Sources */,
 				4201DA872B1F7589002A203E /* DetailSpotViewController.swift in Sources */,
 				4201DA732B1F686B002A203E /* ViewController.swift in Sources */,
 				4201DA6F2B1F686B002A203E /* AppDelegate.swift in Sources */,
@@ -212,6 +222,8 @@
 				133FCBE12B29DABB00B3D849 /* ImageParser.swift in Sources */,
 				4201DA832B1F6C28002A203E /* SpotCell.swift in Sources */,
 				133FCBB72B275FBE00B3D849 /* SurfSpotModel.swift in Sources */,
+				D937E2AD2B2B012900F3FB10 /* MapViewSwiftUI.swift in Sources */,
+				D937E2AB2B2AFBDD00F3FB10 /* PickerViewSwiftUI.swift in Sources */,
 				133FCBC02B284FF000B3D849 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,20 +375,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8683PB3PNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SeaSwiftAndSun-Simplon/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SeaTravel;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iJoe.SeaTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -394,20 +408,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8683PB3PNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SeaSwiftAndSun-Simplon/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SeaTravel;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iJoe.SeaTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
