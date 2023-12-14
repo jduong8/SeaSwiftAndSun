@@ -17,15 +17,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Liste des spots de surf"
         loadData()
-        let vcApple = UIHostingController(rootView: SingInWitAppleView())
-        addChild(vcApple)
-        view.addSubview(vcApple.view)
-        vcApple.didMove(toParent: self)
-        vcApple.view.translatesAutoresizingMaskIntoConstraints = false
-        vcApple.view.topAnchor.constraint(equalTo: self.tableView.bottomAnchor,constant: -20).isActive = true
-        vcApple.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        vcApple.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        vcApple.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//        let vcApple = UIHostingController(rootView: SingInWitAppleView())
+//        addChild(vcApple)
+//        view.addSubview(vcApple.view)
+//        vcApple.didMove(toParent: self)
+//        vcApple.view.translatesAutoresizingMaskIntoConstraints = false
+//        vcApple.view.topAnchor.constraint(equalTo: self.tableView.bottomAnchor,constant: -20).isActive = true
+//        vcApple.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+//        vcApple.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+//        vcApple.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
 
     func loadData() {

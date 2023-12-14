@@ -26,11 +26,32 @@ struct User : Identifiable {
         ]
     }
 }
-struct Main: View {
-    var body: some View {
-        Text("This is the Main Screen")
+
+class Navigation : UINavigationController {
+    
+    
+}
+
+
+struct Main: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        guard let vc = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "Navigation") as? Navigation else {
+            fatalError()
+        }
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
     }
 }
+
+//struct Main: View {
+//    var body: some View {
+//        Text("This is the Main Screen")
+//    }
+//}
 
 
 struct SingInWitAppleView: View {
