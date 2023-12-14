@@ -9,8 +9,6 @@ import UIKit
 import SwiftUI
 
 class HomeViewController: UIViewController {
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +19,6 @@ class HomeViewController: UIViewController {
         vcApple.view.translatesAutoresizingMaskIntoConstraints = false
         vcApple.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         vcApple.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-//        vcApple.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         vcApple.view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
    

@@ -31,6 +31,34 @@ class APIManager {
         
         return decoded
     }
+
+    func addSpot(_ spot: Record) async throws {
+      guard let url = URL(string: APIConstants.urlString) else {
+        throw APIError.invalidPath
+      }
+
+        let body: [String: Any] = [
+            "id": UUID().uuidString,
+            "createdTime": "2018-06-26T16:51:23.000Z",
+            "fields": 
+            
+        ]
+      var urlRequest = URLRequest(url: url)
+      urlRequest.httpMethod = HTTPMethod.post.rawValue
+      urlRequest.setValue(APIConstants.token, forHTTPHeaderField: "Authorization")
+      urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+      let encoder = JSONEncoder()
+      let encodedSpot = try encoder.encode(spot)
+
+      urlRequest.httpBody = encodedSpot
+
+        let (_, response) = try await URLSession.shared.data(for: urlRequest)
+
+      guard (response as? HTTPURLResponse)!.statusCode == 200 else {
+        throw APIError.decoding
+      }
+    }
 }
 
 extension APIManager {

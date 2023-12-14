@@ -20,6 +20,7 @@
 		537EB7E92B29B85D006D43AF /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EB7E82B29B85D006D43AF /* SignInWithAppleView.swift */; };
 		537EB7EC2B29C572006D43AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537EB7EB2B29C572006D43AF /* GoogleService-Info.plist */; };
 		5393975B2B2B01FD00347392 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393975A2B2B01FD00347392 /* HomeViewController.swift */; };
+		5393975D2B2B1E5600347392 /* AddSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393975C2B2B1E5600347392 /* AddSpotView.swift */; };
 		53EFB8D02B29F1A20068437D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 53EFB8CF2B29F1A20068437D /* FirebaseAnalytics */; };
 		53EFB8D22B29F1A20068437D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 53EFB8D12B29F1A20068437D /* FirebaseAnalyticsOnDeviceConversion */; };
 		53EFB8D42B29F1A20068437D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53EFB8D32B29F1A20068437D /* FirebaseAnalyticsSwift */; };
@@ -66,6 +67,7 @@
 		537EB7EA2B29BB49006D43AF /* SeaSwiftAndSun-Simplon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SeaSwiftAndSun-Simplon.entitlements"; sourceTree = "<group>"; };
 		537EB7EB2B29C572006D43AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5393975A2B2B01FD00347392 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5393975C2B2B1E5600347392 /* AddSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				4201DA822B1F6C28002A203E /* SpotCell.swift */,
 				537EB7E82B29B85D006D43AF /* SignInWithAppleView.swift */,
+				5393975C2B2B1E5600347392 /* AddSpotView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				4201DA732B1F686B002A203E /* ViewController.swift in Sources */,
 				537EB7E92B29B85D006D43AF /* SignInWithAppleView.swift in Sources */,
 				4201DA6F2B1F686B002A203E /* AppDelegate.swift in Sources */,
+				5393975D2B2B1E5600347392 /* AddSpotView.swift in Sources */,
 				4201DA712B1F686B002A203E /* SceneDelegate.swift in Sources */,
 				5393975B2B2B01FD00347392 /* HomeViewController.swift in Sources */,
 				4201DA832B1F6C28002A203E /* SpotCell.swift in Sources */,
