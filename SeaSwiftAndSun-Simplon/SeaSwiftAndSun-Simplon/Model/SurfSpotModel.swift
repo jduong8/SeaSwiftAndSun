@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import MapKit
+import SwiftUI
 
 // MARK: - Records
 struct Records: Codable {
@@ -73,17 +75,17 @@ struct Full: Codable {
     var height: Int?
 }
 
-enum SurfSpot {
-    case manuBay
-    case superbank
-    case southernPeru
-    case rockawayBeach
-    case skeletonBay
-    case theBubble
-    case kittyHawk
-    case pipeline
-    case supertubes
-    case pastaPoint
+enum SurfSpot: String, CaseIterable {
+    case manuBay = "Manu Bay"
+    case superbank = "SuperBank"
+    case southernPeru = "Southern Peru"
+    case rockawayBeach = "Rockaway Beach"
+    case skeletonBay = "Skeleton Bay"
+    case theBubble = "The Bubble"
+    case kittyHawk = "Kitty Hawk"
+    case pipeline = "Pipeline"
+    case supertubes = "Supertubes"
+    case pastaPoint = "Pasta Point"
 
     var coordinates: (latitude: Double, longitude: Double) {
         switch self {
@@ -109,4 +111,10 @@ enum SurfSpot {
             return (4.316244, 73.591637)
         }
     }
+}
+
+struct SurfSpotAnnotation: Identifiable {
+    let id = UUID()
+    var name: String
+    var coordinate: CLLocationCoordinate2D
 }
