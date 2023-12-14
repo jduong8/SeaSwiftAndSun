@@ -27,11 +27,11 @@ struct User : Identifiable {
     }
 }
 
-class Navigation : UINavigationController {
-    
-    
-}
+// Intégrer une vue UIKit dans une vue SwiftUI
 
+class Navigation : UINavigationController {
+        
+}
 
 struct Main: UIViewControllerRepresentable {
     
@@ -47,20 +47,13 @@ struct Main: UIViewControllerRepresentable {
     }
 }
 
-//struct Main: View {
-//    var body: some View {
-//        Text("This is the Main Screen")
-//    }
-//}
-
-
 struct SingInWitAppleView: View {
     @State private var currentNonce: String?
     @State private var toMain = false
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ZStack {
-            Color.init(uiColor: .systemGray5)
+            Color.init(uiColor: .white)
             appleButtonView
         }.fullScreenCover(isPresented: $toMain) {
             Main()
