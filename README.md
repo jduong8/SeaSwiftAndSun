@@ -1,6 +1,8 @@
-![appIcon](https://github.com/jduong8/SeaSwiftAndSun/assets/67645352/12b26e23-f7f7-4408-bf8e-2cc587ae0661)
+<div align=center>
+<img src="https://github.com/jduong8/SeaSwiftAndSun/assets/67645352/12b26e23-f7f7-4408-bf8e-2cc587ae0661"/>
+</div>
 
-# Sea Travel (Work in progress)
+# 🌊 Sea Travel (Work in progress)
 
 Cette application est conçu pour avoir des informations sur les spots de surf.
 Voici la liste des fonctionnalités présentes:
