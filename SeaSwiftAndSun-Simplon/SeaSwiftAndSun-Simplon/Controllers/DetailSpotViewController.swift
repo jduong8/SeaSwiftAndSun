@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class DetailSpotViewController: UIViewController {
+
     @IBOutlet weak var spotImage: UIImageView!
     @IBOutlet weak var spotName: UILabel!
     @IBOutlet weak var spotDifficulty: UILabel!
@@ -16,9 +17,9 @@ class DetailSpotViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var endDate: UILabel!
-    
+
     var fields: Fields?
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -27,18 +28,18 @@ class DetailSpotViewController: UIViewController {
         self.fields = fields
         self.fields?.surfSpot = mapDestinationToSurfSpot(destinationName: fields.destination)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.setupSpotImage()
         self.setupSpotName()
         self.setupSpotDifficulty()
-        self.setupLink()
-        self.setupLocation()
+        self.setupSpotUrlLink()
+        self.setupMapView()
         self.setupPeakSeason()
     }
-    
+
     private func setupSpotImage() {
         fields?.photos?.forEach { photo in
             Task {
@@ -46,21 +47,39 @@ class DetailSpotViewController: UIViewController {
             }
         }
     }
-    
+
     private func setupSpotName() {
         self.spotName.text = fields?.destination
     }
-    
+
     private func setupSpotDifficulty() {
         self.spotDifficulty.text = fields?.difficultyLevel?.description
     }
-    
-    private func setupLink() {
+
+    private func setupSpotUrlLink() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openWebsite))
         website.isUserInteractionEnabled = true
         website.addGestureRecognizer(tapGesture)
     }
-    
+
+    private func setupMapView() {
+        guard let surfSpot = fields?.surfSpot else { return }
+
+        let coordinates = surfSpot.coordinates
+        let location = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+        let regionRadius: CLLocationDistance = 1000
+        let region = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(region, animated: true)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = fields?.destination
+        mapView.addAnnotation(annotation)
+    }
+}
+
+// MARK: - Helpers
+extension DetailSpotViewController {
     private func mapDestinationToSurfSpot(destinationName: String?) -> SurfSpot? {
         guard let destinationName = destinationName else { return nil }
 
@@ -89,22 +108,7 @@ class DetailSpotViewController: UIViewController {
             return nil
         }
     }
-    
-    private func setupLocation() {
-        guard let surfSpot = fields?.surfSpot else { return }
 
-        let coordinates = surfSpot.coordinates
-        let location = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-        let regionRadius: CLLocationDistance = 1000
-        let region = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(region, animated: true)
-
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = fields?.destination
-        mapView.addAnnotation(annotation)
-    }
-    
     private func setupPeakSeason() {
         if let stringBeginDate = fields?.peakSurfSeasonBegins,
            let stringEndDate = fields?.peakSurfSeasonEnds {
@@ -115,7 +119,7 @@ class DetailSpotViewController: UIViewController {
             }
         }
     }
-    
+
     @objc private func openWebsite() {
         guard let urlString = fields?.magicSeaweedLink, let url = URL(string: urlString) else { return }
         
